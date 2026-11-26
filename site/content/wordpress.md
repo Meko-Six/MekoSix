@@ -44,7 +44,7 @@ The other six images already exist in the August 2026 uploads. The Slimage one i
 
 1. Appearance → Customize → Additional CSS (or the Spectra global styles panel).
 2. Paste `site/content/wordpress.css`.
-3. Everything is scoped to `.m6-project`, so it will not restyle the rest of Astra.
+3. Everything is scoped to `.m6-project`, so it will not restyle the rest of Astra. The licence page reuses the same wrapper for its download buttons.
 
 ## Replace each accordion detail
 
@@ -105,4 +105,4 @@ When the home MBP has run `site/scripts/notarize-macos.sh` with `M6_PUBLISH=1`:
 
 ## Fonts
 
-Do **not** publish the font ZIP yet. The name table points at `https://mekosix.au/fonts/license`, which is still a 404. Finish `site/fonts/EULA-draft.md`, create that page, then link the ZIP from `/downloads/fonts/`. The snippets show “Licence pending” until then.
+Do **not** publish the font ZIP yet. The name table points at `https://mekosix.au/fonts/license`, which is still a 404. The terms are drafted in `site/fonts/EULA.md` and the page copy in `site/content/fonts-license.md`, both awaiting approval. Once the terms are approved, publish that page, then link the ZIP from `/downloads/fonts/`. The snippets show “Licence pending” until then, and they omit the specimen link until `/fonts/specimen` is uploaded.

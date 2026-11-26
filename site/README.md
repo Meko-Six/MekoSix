@@ -29,7 +29,8 @@ python3 site/preview/build.py
 | `site/content/wordpress.md` | How to apply the copy to the live Spectra page |
 | `site/content/wordpress.css` | Scoped styles for the project panels |
 | `site/content/wordpress-snippets.html` | Generated paste-ready HTML blocks |
-| `site/fonts/` | Normalized Incredible family, specimen, draft EULA |
+| `site/content/fonts-license.md` | Copy for the `/fonts/license` page, with the owner checklist |
+| `site/fonts/` | Normalized Incredible family, specimen, licence text awaiting approval |
 | `site/releases/` | Slate and `SHA256SUMS.txt`; app artifacts are generated and ignored |
 | `site/scripts/notarize-macos.sh` | Run on the home MBP to sign, notarize, staple and publish |
 | `site/runbook/HOME-MBP-RELEASE.md` | The home-MBP steps |
@@ -45,7 +46,7 @@ site/fonts/.venv/bin/python site/fonts/tools/normalize_fonts.py
 ./site/scripts/build_font_package.sh
 ```
 
-The ZIP is written to `site/fonts/dist/Incredible-Family-1.0.zip` and is **git-ignored**, because the repo is public and the font licence is not final. The name table already points at `https://mekosix.au/fonts/license`, which is currently a 404. `site/fonts/EULA-draft.md` is the starting point.
+The ZIP is written to `site/fonts/dist/Incredible-Family-1.0.zip` and is **git-ignored**, because the repo is public and the font licence is not final. The name table already points at `https://mekosix.au/fonts/license`, which is currently a 404. `site/fonts/EULA.md` holds the drafted terms (free for personal and commercial use) and `site/content/fonts-license.md` the page copy, both awaiting approval.
 
 ## Releases
 
@@ -73,9 +74,9 @@ python3 site/scripts/update_checksums.py --releases site/releases
 ## What is still pending
 
 - **WordPress access** — the live page has not been edited. A temporary Application Password or an admin session is needed for Phase 3.
-- **File access** — SFTP/SSH or hPanel File Manager for `/downloads` and `/fonts/license`.
+- **File access** — SFTP/SSH or hPanel File Manager for `/downloads`.
 - **App releases** — the home MBP must run the notarization script with the Developer ID and `salvage-notary` profile.
-- **Font licence** — terms and the `/fonts/license` page.
+- **Font licence** — approve the terms in `site/fonts/EULA.md`, then publish `/fonts/license` from `site/content/fonts-license.md`.
 - **Daily Drop** — the invite CTAs are mailto links; a real form is a later decision.
 - **Extras** — PixelBuddy and ShredR are included in the preview. Add or remove them in `projects.json`.
 - **Downloads host** — the plan recommends GitHub Releases for app binaries; fonts/Slate go to mekosix.au/downloads.

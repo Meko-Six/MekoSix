@@ -37,7 +37,7 @@ the font ZIP are deliberately gated behind "pending" states rather than dead lin
 |---|---|
 | Preview of the updated cards | Done, renders from `projects.json`. Not deployed anywhere. |
 | Copy deck + WordPress snippets + scoped CSS | Done, generated. Not pasted into WordPress. |
-| Incredible family | Normalized, built, specimen done. **Licence unwritten, so ZIP is not published.** |
+| Incredible family | Normalized, built, specimen done. **Licence drafted (`site/fonts/EULA.md`), awaiting approval, so the ZIP is not published.** |
 | Notarization/release script | Written and reviewed, never run (no cert on this machine). |
 | `projects.json` manifest updates | Slate is live and `published: true`. EyeQ/Slimage/DTX/PixelBuddy point at GitHub Releases URLs that **do not exist yet** (`published: false`, buttons show a pending message). |
 | Fonts + app downloads on mekosix.au | Not uploaded. No SFTP/SSH or hPanel access used yet. |
@@ -79,7 +79,8 @@ links — **flip `published`/`download_pending` when an artefact actually exists
 | `site/content/wordpress.md` | How to apply it to the live Spectra page, incl. backup/export steps |
 | `site/content/wordpress.css` | Scoped `.m6-project` styles |
 | `site/content/wordpress-snippets.html` | Generated paste-ready HTML per project |
-| `site/fonts/` | `README.md`, `README.txt`, `EULA-draft.md`, `LICENCE-PENDING.txt`, `specimen.html`, `tools/normalize_fonts.py` |
+| `site/content/fonts-license.md` | Copy for the `/fonts/license` page, with the owner checklist |
+| `site/fonts/` | `README.md`, `README.txt`, `EULA.md` (drafted terms), `LICENCE-PENDING.txt`, `specimen.html`, `tools/normalize_fonts.py` |
 | `site/fonts/otf/`, `woff2/`, `dist/` | Build output — **git-ignored** |
 | `site/releases/` | Slate HTML, `.htaccess`, `SHA256SUMS.txt`; `apps/` is git-ignored |
 | `site/scripts/notarize-macos.sh` | Build → re-sign → notarize → staple → DMG → publish (home MBP only) |
@@ -140,16 +141,19 @@ After a run, commit exactly: `site/projects.json`, `site/releases/SHA256SUMS.txt
 
 1. **WordPress access.** Phase 3 needs an Application Password (or an admin session) plus a Hostinger
    backup/staging snapshot first. Export recipe is in `site/content/wordpress.md`.
-2. **File access.** SFTP/SSH or hPanel File Manager for `public_html/downloads/` and
-   `/fonts/license`. Upload the contents of `site/releases/` including `.htaccess` (blocks directory
-   indexes and executables), and the font ZIP to `downloads/fonts/`.
+2. **File access.** SFTP/SSH or hPanel File Manager for `public_html/downloads/`. Upload the contents
+   of `site/releases/` including `.htaccess` (blocks directory indexes and executables), and the font
+   ZIP to `downloads/fonts/`. The licence page is a WordPress page, so it needs the WordPress access
+   above, not files.
 3. **App releases.** Nothing is on `Meko-Six/MekoSix-releases` yet. That repo must exist and be
    public; the script only uploads, it does not create it. Until then the four app buttons stay
    pending, which is intentional.
-4. **Font licence.** `EULA-draft.md` still has every `[TO CONFIRM]` open: personal-only vs
-   commercial-free vs paid, seat count, attribution, price. The font name table already advertises
-   `https://mekosix.au/fonts/license`, which is a 404. **Do not publish the ZIP or link it until
-   that page exists** — the repo is public, which is exactly why the ZIP is git-ignored.
+4. **Font licence.** Terms are drafted but not approved: `site/fonts/EULA.md` (free for personal
+   and commercial use, no seat limit, attribution optional) and the page copy in
+   `site/content/fonts-license.md`. Waiting on owner sign-off, then the page goes up at
+   `/fonts/license` and the ZIP is uploaded. The font name table already advertises that URL, which
+   is still a 404. **Do not publish the ZIP or link it until the terms are approved** — the repo is
+   public, which is exactly why the ZIP is git-ignored.
 5. **Slimage screenshot.** The card still uses `WebPHeroAcc0.webp`, i.e. the old WebP Hero branding.
    Needs a current Slimage capture.
 6. **Daily Drop CTAs.** Both are `mailto:meko.six@gmail.com?subject=…` invites. A real form is a
@@ -203,7 +207,8 @@ After a run, commit exactly: `site/projects.json`, `site/releases/SHA256SUMS.txt
 
 ## 9. Next actions, in order
 
-1. Decide the font licence terms in `site/fonts/EULA-draft.md`; write the `/fonts/license` page.
+1. Approve the drafted terms in `site/fonts/EULA.md`; publish `/fonts/license` from
+   `site/content/fonts-license.md`; upload the ZIP.
 2. On the home MBP: create/fill `Meko-Six/MekoSix-releases`, run the script with `M6_PUBLISH=1`,
    verify with `spctl -a -vvv -t install` and `xcrun stapler validate`, commit the four manifest files.
 3. Pull here, rerun `build_wordpress.py`, confirm the four app snippets now carry live links.
@@ -216,7 +221,8 @@ After a run, commit exactly: `site/projects.json`, `site/releases/SHA256SUMS.txt
 
 ## 10. Open questions for the owner
 
-- Font licence: personal-only, free-commercial, or paid? Seat count? Attribution required?
+- Font licence: approve the drafted model (free personal + commercial, no seat limit, attribution
+  optional), or switch to personal-only/paid? See `site/fonts/EULA.md`.
 - Should vertical metrics be normalized to a common 800/-300 after all?
 - Do the Daily Drop invite CTAs stay as mailto, or become a real form?
 - Should PixelBuddy (beta) and ShredR stay in the App Lab column, or move/expand?

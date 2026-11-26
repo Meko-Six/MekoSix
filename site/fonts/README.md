@@ -26,7 +26,7 @@ The Bold source was internally named **M6 Incredible** with PostScript name `M6I
 
 ## Licence status — pending
 
-The font name table already says use requires a valid licence from MekoSix and points at `https://mekosix.au/fonts/license`. That page currently returns 404, and no licence file exists. **Do not publish the ZIP or link it from the live site until that page is written and the terms are chosen.** `EULA-draft.md` is a starting point, not a finished licence. The preview shows the font download as “Licence pending” and links only to the local specimen.
+The font name table already says use requires a valid licence from MekoSix and points at `https://mekosix.au/fonts/license`. That page currently returns 404. The terms are now drafted in `EULA.md` (free for personal and commercial use, no seat limit, attribution optional) with the page copy in `../content/fonts-license.md`, but neither is approved or live. **Do not publish the ZIP or link it from the live site until the owner approves the terms and that page is up.** The preview shows the font download as “Licence pending” and links only to the local specimen.
 
 ## Build
 
@@ -39,6 +39,8 @@ site/fonts/.venv/bin/python site/fonts/tools/normalize_fonts.py
 
 The package is written to `site/fonts/dist/Incredible-Family-1.0.zip` and is ignored by git (the repo is public and the licence is not final). The preview uses `woff2/` directly.
 
+The ZIP currently bundles `LICENCE-PENDING.txt`. Once the terms are approved, swap that for `EULA.md` in `build_font_package.sh` and rebuild before uploading, so the package carries the real licence.
+
 ## Files
 
 - `otf/` — normalized desktop fonts (ignored by git)
@@ -46,5 +48,5 @@ The package is written to `site/fonts/dist/Incredible-Family-1.0.zip` and is ign
 - `dist/Incredible-Family-1.0.zip` — OTF + WOFF2 + specimen + licence placeholder (ignored by git)
 - `specimen.html` — self-contained specimen and type tester
 - `tools/normalize_fonts.py` — the build script
-- `EULA-draft.md` — draft terms to finish
+- `EULA.md` — the licence text, awaiting owner approval
 - `LICENCE-PENDING.txt` — included in the ZIP until the EULA is real

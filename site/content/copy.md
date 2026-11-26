@@ -89,7 +89,7 @@ Nothing here is live yet.
 **CTA:** Download family (disabled until licence) + Open specimen
 **Note:** Licence terms are being finalised. The download opens once the EULA at `mekosix.au/fonts/license` is live.
 
-The family is now one installable family (`Incredible` Regular/Bold), not two. The licence page is currently a 404 and the font ZIP is intentionally not in the public repo. See `site/fonts/README.md` and `site/fonts/EULA-draft.md`.
+The family is now one installable family (`Incredible` Regular/Bold), not two. The licence page is currently a 404 and the font ZIP is intentionally not in the public repo. See `site/fonts/README.md` and the drafted terms in `site/fonts/EULA.md`, with page copy in `site/content/fonts-license.md`.
 
 ## Daily Drop — `#daily-drop`
 

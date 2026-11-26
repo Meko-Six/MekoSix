@@ -243,7 +243,8 @@ window.PROJECTS = {
             "label": "Open specimen",
             "url": "../fonts/specimen.html",
             "wp_url": "/fonts/specimen",
-            "pending": false
+            "pending": true,
+            "pending_message": "The specimen page is not live yet — open site/fonts/specimen.html locally."
           },
           "wp_image": "https://mekosix.au/wp-content/uploads/2026/08/IncredibleRegularAcc0.webp",
           "wp_image_note": ""
@@ -278,7 +279,8 @@ window.PROJECTS = {
             "label": "Open specimen",
             "url": "../fonts/specimen.html",
             "wp_url": "/fonts/specimen",
-            "pending": false
+            "pending": true,
+            "pending_message": "The specimen page is not live yet — open site/fonts/specimen.html locally."
           },
           "wp_image": "https://mekosix.au/wp-content/uploads/2026/08/IncredibleBoldAcc0.webp",
           "wp_image_note": ""
