@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Font build output and the local Python environment. The font licence is not
+# final, so the OTFs/WOFF2s/ZIP stay out of this public repo until it is.
+site/fonts/.venv/
+site/fonts/otf/
+site/fonts/woff2/
+site/fonts/dist/
+
+# Signed app artifacts are produced on the home MBP and hosted on GitHub
+# Releases. They are not committed.
+site/releases/apps/
+
+# Optional local exports of the live WordPress page before editing.
+site/backups/

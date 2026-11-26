@@ -1,0 +1,107 @@
+/* MekoSix project panels — paste into Appearance → Customize → Additional CSS.
+   Everything is scoped to .m6-project so it cannot affect the rest of Astra. */
+
+.m6-project {
+  --m6-accent: #ccff00;
+  color: #d6d6d6;
+  font-size: 0.97rem;
+  line-height: 1.62;
+}
+
+.m6-project .m6-anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  height: 0;
+  visibility: hidden;
+}
+
+.m6-project .m6-figure {
+  margin: 0 0 1rem;
+}
+
+.m6-project .m6-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #232323;
+  border-radius: 8px;
+}
+
+.m6-project .m6-description {
+  margin: 0 0 0.7rem;
+  color: #c9c9c9;
+}
+
+.m6-project .m6-meta {
+  margin: 0 0 1rem;
+  color: #9b9b9b;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.m6-project .m6-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0 0 0.9rem;
+}
+
+.m6-project .m6-btn {
+  display: inline-block;
+  padding: 0.72rem 1rem;
+  border: 1px solid var(--m6-accent);
+  border-radius: 4px;
+  background: var(--m6-accent);
+  color: #080808 !important;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  transition: transform 140ms ease, filter 140ms ease;
+}
+
+.m6-project .m6-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+.m6-project .m6-btn-pending {
+  border-style: dashed;
+  background: transparent;
+  color: var(--m6-accent) !important;
+  cursor: default;
+}
+
+.m6-project .m6-btn-pending:hover {
+  transform: none;
+  filter: none;
+}
+
+.m6-project .m6-link {
+  color: #ffffff !important;
+  font-size: 0.78rem;
+  text-decoration: underline !important;
+  text-decoration-color: var(--m6-accent) !important;
+  text-underline-offset: 0.22em;
+}
+
+.m6-project .m6-note {
+  margin: 0;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--m6-accent);
+  color: #969696;
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 600px) {
+  .m6-project .m6-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

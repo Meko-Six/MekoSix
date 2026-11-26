@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Incredible — specimen</title>
+<style>
+  @font-face {
+    font-family: "Incredible";
+    src: url("woff2/Incredible-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Incredible";
+    src: url("woff2/Incredible-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  :root {
+    --bg: #070707;
+    --ink: #f2f2f2;
+    --muted: #9b9b9b;
+    --accent: #ff8a00;
+    --line: #242424;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(900px 500px at 80% -10%, rgba(255, 138, 0, 0.09), transparent 65%),
+      var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+  .eyebrow {
+    margin: 0 0 .8rem;
+    color: var(--accent);
+    font-size: .7rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+  h1 {
+    margin: 0;
+    font-family: "Incredible", var(--sans);
+    font-weight: 700;
+    font-size: clamp(4rem, 14vw, 10rem);
+    line-height: .85;
+    letter-spacing: -.035em;
+  }
+  .intro {
+    max-width: 60ch;
+    margin: 1.2rem 0 0;
+    color: #b8b8b8;
+    line-height: 1.65;
+    font-size: .96rem;
+  }
+  .rule { height: 1px; background: var(--line); margin: 2.6rem 0; }
+  .weights {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .weight {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.5rem;
+    background: #0c0c0c;
+  }
+  .weight header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: baseline;
+    margin-bottom: 1.4rem;
+    color: var(--muted);
+    font-size: .68rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .weight header strong { color: var(--accent); font-weight: 700; }
+  .sample {
+    margin: 0;
+    font-family: "Incredible", var(--sans);
+    font-size: clamp(3rem, 7vw, 5.6rem);
+    line-height: .9;
+    letter-spacing: -.02em;
+  }
+  .sample.regular { font-weight: 400; }
+  .sample.bold { font-weight: 700; }
+  .body-sample {
+    margin: 1.4rem 0 0;
+    font-family: "Incredible", var(--sans);
+    font-weight: 400;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: #c9c9c9;
+  }
+  h2 {
+    margin: 0 0 1rem;
+    font-family: "Incredible", var(--sans);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .tester-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+    color: var(--muted);
+    font-size: .78rem;
+  }
+  .tester-controls input[type="range"] { accent-color: var(--accent); width: 180px; }
+  #tester {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #0b0b0b;
+    color: var(--ink);
+    padding: .9rem 1rem;
+    font-family: var(--sans);
+    font-size: .95rem;
+  }
+  .tester-output {
+    margin-top: 1.2rem;
+    padding: 1.4rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #0a0a0a;
+    overflow-wrap: anywhere;
+  }
+  .tester-output p {
+    margin: 0 0 .8rem;
+    font-family: "Incredible", var(--sans);
+    line-height: 1.1;
+  }
+  .tester-output p:last-child { margin-bottom: 0; }
+  .regular { font-weight: 400; }
+  .bold { font-weight: 700; }
+  .alphabet {
+    margin: 0;
+    font-family: "Incredible", var(--sans);
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    line-height: 1.55;
+    color: #cfcfcf;
+    overflow-wrap: anywhere;
+  }
+  .meta {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+  .meta div {
+    border-top: 1px solid var(--line);
+    padding-top: .8rem;
+  }
+  .meta dt {
+    color: var(--muted);
+    font-size: .64rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .meta dd { margin: .3rem 0 0; font-size: .9rem; }
+  .pending {
+    display: inline-block;
+    margin-top: 2.5rem;
+    padding: .75rem 1rem;
+    border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    border-radius: 6px;
+    color: var(--accent);
+    font-size: .78rem;
+    line-height: 1.5;
+  }
+  footer {
+    margin-top: 3rem;
+    color: #777;
+    font-size: .72rem;
+    line-height: 1.6;
+  }
+  footer a { color: #aaa; }
+  @media (max-width: 760px) {
+    .wrap { padding: 2rem 1.1rem 3rem; }
+    .weights { grid-template-columns: 1fr; }
+    .meta { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <p class="eyebrow">MekoSix · Font Factory</p>
+  <h1>Incredible</h1>
+  <p class="intro">A hand-lettered comic display face in two weights. Drawn for headlines that need to shout, with enough body text for the quiet parts. Both files now install as one family.</p>
+
+  <div class="rule"></div>
+
+  <section class="weights" aria-label="Weights">
+    <article class="weight">
+      <header><span>Incredible</span><strong>Regular · 400</strong></header>
+      <p class="sample regular">Aa Bb Cc</p>
+      <p class="body-sample">The quick brown fox jumps over the lazy dog. 0123456789 — punctuation, &amp; ampersands, “quotes” and more.</p>
+    </article>
+    <article class="weight">
+      <header><span>Incredible</span><strong>Bold · 700</strong></header>
+      <p class="sample bold">Aa Bb Cc</p>
+      <p class="body-sample bold">SHOUT IT FROM THE ROOFTOPS. Then set the small print in Regular.</p>
+    </article>
+  </section>
+
+  <div class="rule"></div>
+
+  <section aria-labelledby="tester-title">
+    <h2 id="tester-title">Type tester</h2>
+    <div class="tester-controls">
+      <label for="tester">Your text</label>
+      <label for="size">Size <output id="sizeOut">72</output> px</label>
+      <input id="size" type="range" min="24" max="180" value="72" step="2">
+    </div>
+    <input id="tester" value="Stuff I’ve been working on lately" autocomplete="off" spellcheck="false">
+    <div class="tester-output" aria-live="polite">
+      <p id="outRegular" class="regular"></p>
+      <p id="outBold" class="bold"></p>
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <section aria-labelledby="glyphs-title">
+    <h2 id="glyphs-title">Character set</h2>
+    <p class="alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 !@#$%^&amp;*()[]{}&lt;&gt;/?\|~`+-=_—–…“”‘’</p>
+  </section>
+
+  <dl class="meta">
+    <div><dt>Family</dt><dd>Incredible</dd></div>
+    <div><dt>Weights</dt><dd>Regular 1.000 · Bold 1.005</dd></div>
+    <div><dt>Formats</dt><dd>OTF · WOFF2</dd></div>
+  </dl>
+
+  <p class="pending"><strong>Licence pending.</strong> This is a specimen, not a public download. The font download opens once the EULA at mekosix.au/fonts/license is live.</p>
+
+  <footer>
+    <p>MekoSix · <a href="https://mekosix.au">mekosix.au</a> · <a href="mailto:meko.six@gmail.com">meko.six@gmail.com</a></p>
+  </footer>
+</main>
+
+<script>
+  const tester = document.getElementById("tester");
+  const size = document.getElementById("size");
+  const sizeOut = document.getElementById("sizeOut");
+  const outputs = [
+    document.getElementById("outRegular"),
+    document.getElementById("outBold"),
+  ];
+
+  function render() {
+    const value = tester.value || "Type something…";
+    const px = Number(size.value);
+    sizeOut.textContent = String(px);
+    outputs.forEach((output) => {
+      output.textContent = value;
+      output.style.fontSize = px + "px";
+    });
+  }
+
+  tester.addEventListener("input", render);
+  size.addEventListener("input", render);
+  render();
+</script>
+</body>
+</html>

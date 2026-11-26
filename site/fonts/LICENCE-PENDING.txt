@@ -1,0 +1,15 @@
+LICENCE NOT YET PUBLISHED
+
+The Incredible font software is the property of MekoSix and is protected by
+copyright law. The font metadata states that use requires a valid licence
+from MekoSix and points to:
+
+    https://mekosix.au/fonts/license
+
+That page is not live yet, and no public licence terms have been chosen.
+This package is a local preview only. Do not redistribute, publish, sell,
+sublicense or embed these font files until the licence page exists and this
+placeholder is replaced with the final End User Licence Agreement.
+
+Contact: meko.six@gmail.com
+MekoSix: https://mekosix.au

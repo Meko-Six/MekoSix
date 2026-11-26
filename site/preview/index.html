@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>MekoSix projects — local preview</title>
+  <meta name="description" content="Local preview of the updated MekoSix project cards.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="preview-bar" role="status">
+    <strong>Local preview.</strong> App binaries publish from the home Mac after notarization; the font download stays off until the licence page is live.
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MekoSix home">
+      <img src="assets/NuM6FA.svg" alt="" width="42" height="42">
+      <span>MekoSix</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#app-lab">App Lab</a>
+      <a href="#font-factory">Font Factory</a>
+      <a href="#daily-drop">Daily Drop</a>
+      <a class="nav-store" href="https://salvagemusic.com/" target="_blank" rel="noopener">Store <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">Melbourne · apps, fonts and small experiments</p>
+      <h1>stuff I’ve been working on lately…</h1>
+      <p class="lede">A lab of small native tools, two hand-drawn weights, and a couple of automations that arrive by email. Free where it can be; one commercial app lives over at Salvage.</p>
+      <p class="hint">Click a project to open it. The first item in each column starts open for review.</p>
+    </section>
+
+    <div id="collections" class="collections"></div>
+
+    <section id="store" class="store" aria-labelledby="store-title"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>MekoSix · Melbourne · <a href="mailto:meko.six@gmail.com">meko.six@gmail.com</a></p>
+    <p class="footer-links">
+      <a href="../releases/SHA256SUMS.txt">SHA-256 checksums</a>
+      <span aria-hidden="true">·</span>
+      <a href="../projects.json">projects.json</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://salvagemusic.com/" target="_blank" rel="noopener">salvagemusic.com ↗</a>
+    </p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <p class="noscript">This preview needs JavaScript to render the project cards.</p>
+  </noscript>
+
+  <script src="projects.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

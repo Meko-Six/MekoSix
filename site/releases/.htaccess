@@ -1,0 +1,11 @@
+# Static downloads only. Upload this file with the release tree to /downloads.
+
+Options -Indexes
+
+<FilesMatch "\.(php|phtml|phar|cgi|pl|py|sh|bash)$">
+  Require all denied
+</FilesMatch>
+
+AddType font/otf .otf
+AddType font/woff2 .woff2
+AddType application/zip .zip
